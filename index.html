@@ -268,22 +268,24 @@
           </div>
           <div class="row">
             <div class="contact-form">
-              <form>
+              <form name="portfolio2-contact-form">
                 <div class="row">
                   <div class="input-group">
-                    <input type="text" placeholder="Name" class="input-control" required />
+                    <input type="text" placeholder="Name" class="input-control" name="name" required />
                   </div>
                   <div class="input-group">
-                    <input type="text" placeholder="Email" class="input-control" required />
+                    <input type="text" placeholder="Email" class="input-control" name="email" required />
                   </div>
                   <div class="input-group">
-                    <input type="text" placeholder="Subject" class="input-control" required />
+                    <input type="text" placeholder="Subject" class="input-control" name="subject" required />
                   </div>
                   <div class="input-group">
-                    <textarea placeholder="Message" class="input-control" required></textarea>
+                    <textarea placeholder="Message" class="input-control" name="message" required></textarea>
                   </div>
                   <div class="submit-btn">
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn btn-send">Send Message</button>
+                    <button type="submit" class="btn btn-loading">loading...</button>
+                    <button type="submit" class="btn btn-success">Success</button>
                   </div>
                 </div>
               </form>

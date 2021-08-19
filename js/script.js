@@ -77,3 +77,19 @@ function portfolioItemDetails(portfolioItem) {
 
   document.querySelector(".pp-body").innerHTML = portfolioItem.querySelector(".portfolio-item-details").innerHTML;
 }
+
+/*****************-contact active-***********************/
+const scriptURL = "https://script.google.com/macros/s/AKfycbwQv0RC8hQIrX35DL0rWmBBJI3lgo2ge_RT-OM7CHdr01fzcTNq-crHXJCxGzx4qLHGvQ/exec";
+const form = document.forms["portfolio2-contact-form"];
+const btnSend = document.querySelector(".btn-send");
+const btnSuccess = document.querySelector(".btn-success");
+
+form.addEventListener("submit", (e) => {
+  btnSuccess.classList.toggle("btn-success");
+  btnSend.classList.toggle("btn-success");
+  form.reset();
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => console.log("Success!", response))
+    .catch((error) => console.error("Error!", error.message));
+});

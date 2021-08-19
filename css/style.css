@@ -186,7 +186,6 @@ button {
   vertical-align: middle;
   transition: color 0.3s ease;
 }
-
 .btn::before {
   content: "";
   position: absolute;
@@ -750,7 +749,7 @@ header .nav-inner ul li a:hover {
   width: 100%;
   margin-bottom: 30px;
 }
-contact-form .input-control::placeholder {
+.contact-form .input-control::placeholder {
   color: var(--blue-dark);
   opacity: 0.8;
   font-weight: 300;
@@ -803,6 +802,13 @@ contact-form .input-control::placeholder {
 .contact-info-item .social-links a:hover {
   color: var(--white);
   background-color: var(--main-color);
+}
+
+.contact-form .btn-loading {
+  display: none;
+}
+.contact-form .btn-success {
+  display: none;
 }
 
 /* responsive */
